@@ -2,57 +2,6 @@ name: Node.js CI DEV
 on:
   push:
     branches: ["dev"]
-    
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: 16
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm ci
-      - run: npm test
-
-
-name: Node.js CI QA
-on:
-  push:
-    branches: ["qa"]
-  pull_request:
-    branches: ["qa"]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: 16
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm ci
-      - run: npm test
-
-
-
-name: Node.js CI prod
-on:
-  push:
-    branches: ["prod"]
-  pull_request:
-    branches: ["prod"]
 
 jobs:
   build:
