@@ -1,7 +1,7 @@
-name: Node.js CI QA
+name: Node.js Continuous Integration
 on:
   push:
-    branches: ["qa"]
+    branches: ["dev", "qa"]
 
 jobs:
   build:
