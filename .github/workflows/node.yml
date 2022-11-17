@@ -2,6 +2,8 @@ name: Node.js Continuous Integration
 on:
   push:
     branches: ["dev", "qa"]
+  pull_request:
+    branches: ["prod"]
 
 jobs:
   build:
