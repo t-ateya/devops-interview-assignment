@@ -1,7 +1,7 @@
-name: Node.js CI DEV
+name: Node.js Continuos Integration
 on:
   push:
-    branches: ["dev"]
+    branches: ["dev", "qa"]
 
 jobs:
   build:
