@@ -1,10 +1,10 @@
 terraform {
   required_version = ">= 0.12"
   backend "s3" {
-    bucket = "bucket_name"
-    key = "assignment-app.tfstate"
+    bucket = "Enter Your Bucket Name"
+    key = "Enter your key e.g assignment-app.tfstate"
     encrypt = true 
-    dynamo_table = "dynamo table name"
+    dynamo_table = "Enter your bucket name"
   }
   
 }
